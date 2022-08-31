@@ -1,0 +1,195 @@
+@media only screen and (max-width: 63.9375em) {
+    
+    
+    .menu-father {
+        height: 50px;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    .menu-father ul,
+    form,
+    .sig {
+        display: none;
+    }
+    .menu-father H1 {
+        display: block!important;
+        margin: auto;
+        font-size: 19px;
+        padding: 0;
+    }
+    .body {
+        width: auto;
+    }
+    .content-big {
+        margin-top: 50px;
+        padding-top: 40px;
+        padding-left: 0;
+        height: auto;
+        width: auto;
+    }
+    .left img {
+        width: 100px;
+        height: 100px;
+    }
+    .left {
+        padding-top: 0px;
+    }
+    .list {
+        text-align: center;
+    }
+    .nav__bars-btn2 {
+        display: block;
+        line-height: 75px;
+        margin-right: 20px;
+        width: 28px;
+        height: 28px;
+        cursor: pointer;
+    }
+    .nav__bars-btn1 {
+        display: block;
+        line-height: 75px;
+        margin-left: 20px;
+        width: 28px;
+        height: 28px;
+        cursor: pointer;
+    }
+    .nav__mobile {
+        margin-top: px;
+        position: fixed;
+        right: 0;
+        top: 50px;
+        bottom: 0;
+        width: 200px;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        max-width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-140%);
+        transition: transform linear 0.3s, opacity linear 0.3s;
+        opacity: 0;
+    }
+    .nav__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.3);
+        display: none;
+        animation: fadeUot linear 0.8s;
+    }
+    .Jquery {
+        margin-right: 10px;
+    }
+    .nav__mobile a {
+        color: #fff !important;
+        text-align: center;
+        padding: 10px;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+    .nav__mobile a:hover {
+        background: black;
+    }
+    .nav__mobile a:last-child {
+        border: none;
+    }
+    .nav__mobile a:hover {
+        color: #AAA!important;
+    }
+    .right {
+        line-height: 15px;
+    }
+    .nar__mobile-list {
+        margin-top: 24px;
+    }
+    .heading {
+        padding-top: 10px;
+        height: auto!important;
+        text-align: center;
+        padding-left: 0px;
+        line-height: 20px;
+    }
+    .banner1 {
+        margin-right: 0px!important;
+        float: none!important;
+    }
+    .heading button {
+        float: none!important;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .fa-xmark {
+        cursor: pointer;
+        font-size: 15px;
+    }
+    .fa-xmark:hover {
+        color: red;
+    }
+    .nav__mobile-first {
+        padding: 9px;
+        border-bottom: 1px solid #fff;
+    }
+    .nav__input:checked~.nav__overlay {
+        display: block;
+    }
+    .nav__input:checked~.nav__mobile {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    .nav__input {
+        display: none;
+    }
+    @keyframes fadeOut {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    #search-2 {
+        position: fixed;
+        top: 50px;
+        left: 20px;
+        display: block;
+        padding: 6px;
+        font-size: 12px;
+        height: 31px;
+        background-color: #AAA;
+        border: none;
+        border-radius: 4px;
+        outline: none;
+        transform: translateX(-120%);
+        transition: transform linear 0.3s, opacity linear 0.2s;
+    }
+    .play {
+        margin-left: 25%;
+    }
+    .heading button {
+        position: inherit;
+        right: 0;
+        margin-bottom: 20px;
+    }
+    .container1 {
+        width: 500px;
+        height: 100px;
+        margin: auto;
+      }
+      .video-wrapper video {
+        height: 220px;
+      }
+
+}
+/*responsive*/
+@media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }}
