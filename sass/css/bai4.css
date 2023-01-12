@@ -966,7 +966,7 @@ input {
 }
 
 .videoSlide {
-  width: 62rem;
+  justify-content: center;
   margin: auto;
   display: grid;
   gap: 30px;
