@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Spreadshirt</title>
-    <link rel="shortcut icon" type="image/png" href="/public/img/logo.jpg"/>
+    <link rel="shortcut icon" type="image/png" href="/public/img/logo.jpg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css"
@@ -17,13 +17,12 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
-
-    
-    <script src="bai4.js"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -33,14 +32,12 @@
   </head>
 
   <body>
-    <!-- MENU --> 
+    <!-- MENU -->
     <div class="menu-father">
-      <button id="gototop"><i class="fas fa-angle-double-up"></i></button>
-      <label
-        onclick="document.getElementById('search-2').style.transform = 'translateX(0%)' "
-        for="search__tinder"
-        class="nav__bars-btn1"
-      >
+      <button id="gototop">
+        <i class="fas fa-angle-double-up icon-black"></i>
+      </button>
+      <label for="search__tinder" class="nav__bars-btn1 labelsearch">
         <svg
           aria-hidden="true"
           focusable="false"
@@ -59,7 +56,6 @@
       </label>
       <input
         id="search-2"
-        onkeyup="myFunction2()"
         type="text"
         placeholder="Search everything..."
         name="search"
@@ -74,12 +70,12 @@
       <div class="poin">
         <ul>
           <li id="hide" class="position">
-            <a>EVERYTHING</a>
+            <a href="#footer">EVERYTHING</a>
 
             <i class="fas fa-angle-down icon"></i>
             <div class="header" id="style-2">
               <ul>
-                <li><a href="#">SHIRT</a></li>
+                <li><a href="#">SHIRT <small>news</small></a></li>
                 <li><a href="#">PANTS</a></li>
                 <li><a href="#"> SKIRT</a></li>
                 <li><a href="#">HAT</a></li>
@@ -101,7 +97,7 @@
             <i class="fas fa-angle-down icon"></i>
             <div class="header style-1">
               <ul>
-                <li><a href="#">SHIRT</a></li>
+                <li><a href="#">SHIRT </a></li>
                 <li><a href="#">POPULAR</a></li>
                 <li><a href="#">VIDEOS</a></li>
                 <li><a href="#">GIFTS</a></li>
@@ -158,73 +154,91 @@
         <a href="#">VIDEOS</a>
         <a href="#">GIFTS</a>
       </nav>
-      
+
       <!--  cart modal  -->
-      <div class="cart-modal-overlay">
-        <div class="cart-modal">
+
+      <div class="cart-modal">
+        <div class="cart-title">
           <i id="close-btn" class="fas fa-times"></i>
-            <h1 class="cart-is-empty">Cart is empty</h1>
-          
-            <div class="product-rows">
-            </div>
-            <div class="total">
-              <h1 class="cart-total">TOTAL:</h1>
-                <span class="total-price">$0</span>
-                  <button class="purchase-btn">PURCHASE</button>
-            </div>
+          <div class="cart-icon">
+            <i class="fa-solid fa-cart-shopping cartShopping"></i>
+            <span style="color: black; margin-left: 3px; font-size: 16px"
+              >Cart</span
+            >
           </div>
         </div>
-      
-        <div class="flexGap">
-        <a href="#" class="sig"> Signup - Signin </a>
+        <hr />
+        <h1 class="cart-is-empty">Cart is empty</h1>
+
+        <div class="product-rows"></div>
+        <div class="total">
+          <h1 class="cart-total">TOTAL:</h1>
+          <span class="total-price">$0</span>
+          <button class="purchase-btn">PURCHASE</button>
+        </div>
+      </div>
+
+      <div class="flexGap">
+        <div class="signinup">
+          <a href="#" class="sig"> LOGIN </a>
+        </div>
         <div class="heart-btn">
           <i class="fa-solid fa-heart heart"></i>
-          <span class ="heart-quantity">0</span>
+          <!-- <span class ="heart-quantity">0</span> -->
         </div>
         <div class="cart-btn">
           <i id="cart" class="fa-solid fa-cart-shopping cart"></i>
-          <span class ="cart-quantity">0</span>
+          <span class="cart-quantity">0</span>
         </div>
       </div>
     </div>
     <!-- SlideShow -->
-    <div class="video-wrapper">
-      <video id="video-2" playsinline autoplay muted loop poster="cake.jpg">
-        <source
-          src="https://media.istockphoto.com/videos/gotta-be-tough-to-make-it-out-here-video-id1246064811"
-          type="video/webm"
-        />
-        Your browser does not support the video tag.
-      </video>
-      <div class="slideShow">
-        <div class="slideShow-img">
-          <div class="container1">
-            <img class="slide" src="public/img/picture-1.jpg" idx="0" alt="" />
-            <img class="slide" src="public/img/picture-2.jpg" idx="1" alt="" />
-            <img class="slide" src="public/img/picture-3.jpg" idx="2" alt="" />
-            <img class="slide" src="public/img/picture-4.png" idx="3" alt="" />
+    <div class="cd-slider">
+      <h2 class="content-shop">
+        <div>
+          SHOP
+        </div>
+        unique products created by independent designers
+      </h2>
+      <div class="shop-now">Shop now</div>
+      <ul>
+        <li>
+          <div class="image" style="background-image:url(./public/img/slideshow/jackets-collection.jpg);"></div>
+          <div class="content">
+            <h2 style="color:#fff" >Jackets Collection</h2>
+           
           </div>
-          <a class="btn-change prev" id="prevv">❮</a>
-          <a class="btn-change next" id="nextt">❯</a>
-        </div>
-        <div class="change-img">
-          <button class="active" idx="0"></button>
-          <button idx="1"></button>
-          <button idx="2"></button>
-          <button idx="3"></button>
-        </div>
-      </div>
-    </div>          
+        </li>
+       
+        <li>
+          <div class="image" style="background-image:url(./public/img/slideshow/winter-shoes.webp);"></div>
+          <div class="content">
+            <h2 style="color:#fff">Winter Shoes</h2>
+           
+          </div>
+        </li>
+        <li>
+          <div class="image" style="background-image:url(./public/img/slideshow/winter-collection.jpg);"></div>
+          <div class="content">
+            <h2>Winter Collection</h2>
+           
+          </div>
+        </li>
+        <li>
+          <div class="image" style="background-image:url(./public/img/slideshow/summer-collection.jpg);"></div>
+          <div class="content">
+            <h2>Summer Collection</h2>
+            
+          </div>
+        </li>      
+      </ul>
+    </div>
     <!-- content -->
-    <div class="content-big"> 
+    <div class="content-big">
       <div class="left">
         <div class="fancy">
-          <a
-            data-fancybox="gallery"
-            href="public/img/avatar.jpg"
-            ><img
-              class="img"
-              src="public/img/avatar.jpg"
+          <a data-fancybox="gallery" href="public/img/avatar.jpg"
+            ><img class="img" src="public/img/avatar.jpg"
           /></a>
           <div class="viral">
             <h2>Minh Chinh</h2>
@@ -234,11 +248,7 @@
             <button class="black">Follow</button>
           </div>
         </div>
-        <div class="col">
-          <a class="child" href="#">12 Boards</a>
-          <a href="#">58 Posts</a>
-          <a href="#">134 Likes</a>
-        </div>
+        
       </div>
       <div class="right">
         <div>
@@ -257,126 +267,167 @@
     </div>
     <!-- video slide -->
     <div class="content-container">
-        <div class="content-small reveal">
-            <h1>Trending Designs</h1>
-            <div class="videoSlide">
-        
-                <div class="row-title item1">
-                    <video id="video-1" playsinline autoplay muted loop poster="cake.jpg">
-                        <source
-                        src="public/img/clip1.webm "
-                        type="video/webm"
-                        />
-                    </video>
-                    <span>Marketplace Bestsellers</span>
-                </div>
-                <div class="row-title item2">        
-                        <img src="./public/img/grid1.webp" />            
-                    <span>ToteBags</span>
-                </div>
-                <div class="row-title item3">        
-                    <img src="./public/img/grid2.webp" />  
-                    <span>Summer T-Shirts</span>
-                </div>
-             
-                <div class="row-title item4">        
-                        <img src="./public/img/grid3.webp" />  
-                        <span>Stikers</span>
-                </div>
-                <div class="row-title item5">        
-                        <img src="./public/img/grid4.webp" />  
-                        <span>Minions</span>
-                </div>              
-            </div>
-         
+      <div class="content-small reveal">
+        <h1>Trending Designs</h1>
+        <div class="videoSlide">
+          <div class="row-title item1">
+            <video
+              id="video-1"
+              playsinline
+              autoplay
+              muted
+              loop
+              poster="cake.jpg"
+            >
+              <source src="public/img/clip1.webm " type="video/webm" />
+            </video>
+            <span>Marketplace Bestsellers</span>
+          </div>
+          <div class="row-title item2">
+            <img src="./public/img/grid1.webp" />
+            <span>ToteBags</span>
+          </div>
+          <div class="row-title item3">
+            <img src="./public/img/grid2.webp" />
+            <span>Summer T-Shirts</span>
+          </div>
 
+          <div class="row-title item4">
+            <img src="./public/img/grid3.webp" />
+            <span>Stikers</span>
+          </div>
+          <div class="row-title item5">
+            <img src="./public/img/grid4.webp" />
+            <span>Minions</span>
+          </div>
         </div>
+      </div>
     </div>
     <!-- list Product -->
-    <div class="ListProDuct reveal">
-        <div class="containerProduct">
-            <header>
-                <h1 class="name">List Product</h1>
-            </header>
-            <div class="customSearch">
-               
-                <div  id="search">          
-                    <form id="search-form" class="ui action input" action="" method="POST" enctype="multipart/form-data">              
-                            <input id="input-search" class="search" type="text" placeholder="Search" id="search-bar"  /> 
-                            <button class="search ui button btn-wiki" id="button-search" type="submit"><i class="fas fa-search"></i></button>        
-                    
-                    </form>
-                </div>
-                <div class="row" id="filter">
-                    <form>
-                       
-                        <div class="form-group">
-                            <select data-filter="type" class="filter-type filter form-control">
-                                <option value="">Select Type</option>
-                                <option value="">Show All</option>
-                            </select>
-                        </div>
-                       
-                    </form>
-                </div>
-            </div>
-            <div class="row" id="products">            
-            </div> 
-            
+    <div class="ListProDuct reveal" >
+      <div class="containerProduct">
+        <header>
+          <h1 class="name">List Product</h1>
+        </header>
+        <div class="customSearch">
+          <div id="search">
+            <form
+              id="search-form"
+              class="ui action input"
+              action=""
+              method="POST"
+              enctype="multipart/form-data"
+            >
+              <input
+                id="input-search"
+                class="search"
+                type="text"
+                placeholder="Search"
+                id="search-bar"
+              />
+              <button
+                class="search ui button btn-wiki"
+                id="button-search"
+                type="submit"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+          <div class="row" id="filter">
+            <form>
+              <div class="form-group">
+                <select
+                  data-filter="type"
+                  class="filter-type filter form-control"
+                >
+                  <option value="">Select Type</option>
+                  <option value="">Show All</option>
+                </select>
+              </div>
+            </form>
+          </div>
         </div>
+        <div class="row" id="products"></div>
+      </div>
     </div>
     <!-- footer -->
-    <footer class="footer">
-        <div class="container-footer">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>company</h4>
-                    <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">privacy policy</a></li>
-                        <li><a href="#">affiliate program</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>get help</h4>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">shipping</a></li>
-                        <li><a href="#">returns</a></li>
-                        <li><a href="#">order status</a></li>
-                        <li><a href="#">payment options</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>online shop</h4>
-                    <ul>
-                        <li><a href="#">watch</a></li>
-                        <li><a href="#">bag</a></li>
-                        <li><a href="#">shoes</a></li>
-                        <li><a href="#">dress</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>follow us</h4>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/chinhnguyendacc/"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
+    <footer>
+    <div class="contact" id="footer">
+      <h6>contact us</h6>
+      <p class="one">Hi, we are always open for cooperation and suggestions,<br> contact us in one of the ways below</p>
+      <div class="details">
+        <div>
+          <p>phone number</p>
+          <span><a href="">0398805505</a></span>
+        </div> 
+        <div> 
+          <p>email address</p>
+          <span><a href="">chinhnguyendac123@gmail.com</a></span>
         </div>
-   </footer>
-   <script src="./Logic/SlideShow.js"></script>
+        <div>
+          <p>our location</p>
+          <span>Quảng Điền,Thừa Thiên Huế</span>
+        </div> 
+        <div>
+          <p>working hours</p>
+          <span>Mon-Sat 10.00am-7.00pm</span>
+        </div> 
+      </div>  
+    </div>
+    <div class="information">
+      <h6>information</h6>
+      <p>about us</p>
+      <p>delivery information</p>
+      <p>privacy policy</p>
+      <p>brands</p>
+      <p>contact us</p>
+      <p>returns</p>
+      <p>site map</p>
+    </div>
+    <div class="account">
+      <h6>my account</h6>
+      <p>store location</p>
+      <p>order history</p>
+      <p>wish list</p>
+      <p>newsletter</p>
+      <p>special offers</p>
+      <p>gift certificates</p>
+      <p>affiliate</p>
+    </div>
+    <div class="newsletter">
+      <h6>newsletter</h6>
+      <p>enter your email address below to subscribe to our newsletter<br>
+      and keep up to date with discounts and special offers</p>    
+      <input type="email" name="email" placeholder="user@example.com">
+      <button>Subscribe</button>
+      <p>follow us on social networks</p>
+      <a href=""><i class="fab fa-facebook-f"></i></a>
+      <a href=""><i class="fab fa-twitter"></i></a>
+      <a href=""><i class="fab fa-youtube"></i></a>
+      <a href=""><i class="fab fa-instagram"></i></a>
+      <a href=""><i class="fas fa-rss"></i></a>
+    </div>
+  </footer>
+  <div class="footer-2">
+    <p>Powered by @ Nguyễn Đắc Minh Chính - 11/1/2021</p>
+    <div class="icons">
+      <a href=""><i class="fab fa-cc-paypal" style="font-size:20px;"></i></a>
+      <a href=""><i class="fab fa-cc-visa" style="font-size:20px;"></i></a>
+      <a href=""><i class="fab fa-cc-amex" style="font-size:20px;"></i></a>
+      <a href=""><i class="fab fa-cc-mastercard" style="font-size:20px;"></i></a>
+      <a href=""><i class="fab fa-cc-mastercard" style="font-size:20px;"></i></a>
+    </div>  
+  </div>
+
+    <script src="./Logic/ToggleSearch.js"></script>
     <script src="./Logic/GoToTop.js"></script>
     <script src="./Logic/Dropdown.js"></script>
     <script src="./Logic/RevealScroll.js"></script>
     <script src="./Logic/SearchProduct.js"></script>
     <script src="./Logic/Pagination.js"></script>
     <script src="./Logic/AddToCard.js"></script>
-    <script src="SpeadShirtShop.js"></script>
-    
+    <script src="./Logic/SpeadShirtShop.js"></script>
+    <script src="./Logic/slide.js"></script>
   </body>
 </html>

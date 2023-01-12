@@ -1,29 +1,26 @@
 // ADD TO CART
 // open cart modal
 const cart = document.querySelector('#cart');
-const cartModalOverlay = document.querySelector('.cart-modal-overlay');
+const cartModalOverlay = document.querySelector('.cart-modal');
 
 cart.addEventListener('click', () => {
-  if (cartModalOverlay.style.transform === 'translateX(100%)'){
-    cartModalOverlay.style.transform = 'translateX(0%)';
-  } else {
-    cartModalOverlay.style.transform = 'translateX(0%)';
+  if(cartModalOverlay.style = 'display:none')
+  {
+    cartModalOverlay.style = 'display:block';
   }
+
 })
+
 // end of open cart modal
 
 // close cart modal
 const closeBtn = document.querySelector ('#close-btn');
 
 closeBtn.addEventListener('click', () => {
-  cartModalOverlay.style.transform = 'translateX(100%)';
+  cartModalOverlay.style= 'display:none';
 });
 
-cartModalOverlay.addEventListener('click', (e) => {
-  if (e.target.classList.contains('cart-modal-overlay')){
-    cartModalOverlay.style.transform = 'translateX(100%)'
-  }
-})
+
 // end of close cart modal
 
 // add products to cart
@@ -64,7 +61,7 @@ function addItemToCart (price, imageSrc) {
   <div class="product-row">
         <img class="cart-image" src="${imageSrc}" alt="">
         <span class ="cart-price">${price}</span>
-        <input class="product-quantity" type="number" value="1">
+        <input class="product-quantity " type="number"  min="1" step="1" value="1">
         <button class="remove-btn">Remove</button>
         </div>
         
@@ -116,16 +113,17 @@ function updateCartPrice() {
  
   var quantityElement = cartRow.getElementsByClassName('product-quantity')[0]
   var replacePrice = priceElement.innerText.replace('$', '')
-  var replacePoinPrice = replacePrice.replace(',','.')
-  var price = parseFloat(replacePoinPrice)
  
+  var price = parseFloat(replacePrice)
+
   var quantity = quantityElement.value
   total = total + (price * quantity )
-    
-  }
-  document.getElementsByClassName('total-price')[0].innerText =  '$' + total 
+ 
 
-document.getElementsByClassName('cart-quantity')[0].textContent = i /= 2
+  }
+  document.getElementsByClassName('total-price')[0].innerText =  '$' + total.toFixed(2)
+
+  document.getElementsByClassName('cart-quantity')[0].textContent = i /= 2
 }
 // end of update total price
 
@@ -138,7 +136,7 @@ purchaseBtn.addEventListener('click', purchaseBtnClicked)
 
 function purchaseBtnClicked () {
   alert ('Thank you for your purchase');
-  cartModalOverlay.style.transform= 'translateX(100%)'
+  cartModalOverlay.style= 'display:none'
  var cartItems = document.getElementsByClassName('product-rows')[0]
  while (cartItems.hasChildNodes()) {
    cartItems.removeChild(cartItems.firstChild)
